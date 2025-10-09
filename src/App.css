@@ -1,42 +1,215 @@
-#root {
-  max-width: 1280px;
+/* ========== ESTILOS GENERALES ========== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Poppins', Arial, sans-serif;
+  background-color: #f0f2f5;
+  color: #222;
+  line-height: 1.6;
+  padding-top: 70px;
+}
+
+/* ========== NAVBAR ========== */
+nav {
+  background-color: #1e1e1e;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 1rem 0;
+  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.2);
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+}
+
+nav a {
+  color: #fff;
+  text-decoration: none;
+  margin: 0 1.5rem;
+  font-weight: 600;
+  transition: color 0.3s ease, transform 0.2s ease;
+}
+
+nav a:hover {
+  color: #ffcc00;
+  transform: translateY(-2px);
+}
+
+/* ========== CATÁLOGO ========== */
+.catalogo {
+  width: 100%;
+  margin: 3rem 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.catalogo h2 {
+  text-align: center;
+  margin-bottom: 3rem;
+  font-size: 2rem;
+  color: #333;
+  border-bottom: 3px solid #ffcc00;
+  padding-bottom: 0.5rem;
+  display: inline-block;
+}
+
+/* ========== GRID DE PRODUCTOS - CENTRADO ========== */
+.lista-productos {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 2rem;
+  padding: 0 1rem;
+  max-width: 1400px;
   margin: 0 auto;
+}
+
+/* ========== CARD DE PRODUCTO ========== */
+.card {
+  background-color: #fff;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 280px;
+  flex-shrink: 0;
+}
+
+.card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 6px 14px rgba(0, 0, 0, 0.15);
+}
+
+.card img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+
+.card h3 {
+  margin: 1rem;
+  font-size: 1.2rem;
+  color: #222;
+}
+
+.card p {
+  margin: 0 1rem 1rem;
+  color: #555;
+  font-weight: 500;
+  font-size: 1.1rem;
+}
+
+.card a {
+  text-align: center;
+  background-color: #1e1e1e;
+  color: #fff;
+  padding: 0.8rem;
+  text-decoration: none;
+  font-weight: 600;
+  border-radius: 0 0 12px 12px;
+  transition: background-color 0.3s ease;
+  display: block;
+}
+
+.card a:hover {
+  background-color: #ffcc00;
+  color: #222;
+}
+
+/* ========== DETALLE DE PRODUCTO ========== */
+.detalle-producto {
+  max-width: 900px;
+  margin: 3rem auto;
+  background-color: #fff;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
   padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   text-align: center;
 }
 
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
-}
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-.logo.react:hover {
-  filter: drop-shadow(0 0 2em #61dafbaa);
+.detalle-producto img {
+  width: 100%;
+  max-height: 400px;
+  object-fit: cover;
+  border-radius: 10px;
 }
 
-@keyframes logo-spin {
-  from {
-    transform: rotate(0deg);
+.detalle-producto h2 {
+  margin: 1.5rem 0 0.5rem;
+  font-size: 2rem;
+  color: #222;
+}
+
+.detalle-producto p {
+  font-size: 1.1rem;
+  margin: 0.5rem 0;
+  color: #555;
+}
+
+/* ========== FOOTER ========== */
+footer {
+  background-color: #1e1e1e;
+  color: #fff;
+  text-align: center;
+  padding: 1rem 0;
+  margin-top: 3rem;
+  font-size: 0.9rem;
+}
+
+/* ========== RESPONSIVE DESIGN ========== */
+@media (max-width: 768px) {
+  body {
+    padding-top: 120px;
   }
-  to {
-    transform: rotate(360deg);
+
+  nav {
+    flex-direction: column;
+    padding: 0.5rem 0;
+  }
+
+  nav a {
+    margin: 0.5rem 0;
+  }
+
+  .lista-productos {
+    gap: 1.5rem;
+  }
+
+  .card {
+    width: 100%;
+    max-width: 320px;
+  }
+
+  .detalle-producto {
+    padding: 1rem;
+    margin: 2rem 1rem;
+  }
+
+  .detalle-producto h2 {
+    font-size: 1.6rem;
   }
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  a:nth-of-type(2) .logo {
-    animation: logo-spin infinite 20s linear;
+@media (max-width: 480px) {
+  .catalogo h2 {
+    font-size: 1.5rem;
   }
-}
 
-.card {
-  padding: 2em;
-}
-
-.read-the-docs {
-  color: #888;
+  .card {
+    width: 100%;
+  }
 }
