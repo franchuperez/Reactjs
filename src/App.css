@@ -1,4 +1,4 @@
-/* ========== ESTILOS GENERALES ========== */
+
 * {
   margin: 0;
   padding: 0;
@@ -13,7 +13,6 @@ body {
   padding-top: 70px;
 }
 
-/* ========== NAVBAR ========== */
 nav {
   background-color: #1e1e1e;
   display: flex;
@@ -41,7 +40,7 @@ nav a:hover {
   transform: translateY(-2px);
 }
 
-/* ========== CATÁLOGO ========== */
+
 .catalogo {
   width: 100%;
   margin: 3rem 0;
@@ -61,7 +60,7 @@ nav a:hover {
   display: inline-block;
 }
 
-/* ========== GRID DE PRODUCTOS - CENTRADO ========== */
+
 .lista-productos {
   display: flex;
   flex-wrap: wrap;
@@ -72,7 +71,7 @@ nav a:hover {
   margin: 0 auto;
 }
 
-/* ========== CARD DE PRODUCTO ========== */
+
 .card {
   background-color: #fff;
   border-radius: 12px;
@@ -127,7 +126,6 @@ nav a:hover {
   color: #222;
 }
 
-/* ========== DETALLE DE PRODUCTO ========== */
 .detalle-producto {
   max-width: 900px;
   margin: 3rem auto;
@@ -160,7 +158,7 @@ nav a:hover {
   color: #555;
 }
 
-/* ========== FOOTER ========== */
+
 footer {
   background-color: #1e1e1e;
   color: #fff;
@@ -170,7 +168,7 @@ footer {
   font-size: 0.9rem;
 }
 
-/* ========== RESPONSIVE DESIGN ========== */
+
 @media (max-width: 768px) {
   body {
     padding-top: 120px;
