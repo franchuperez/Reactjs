@@ -30,24 +30,24 @@ Utiliza Firebase Firestore para almacenar los productos y las órdenes de compra
  Instalación
 
 Clonar el repositorio:
-   ```bash
+   bash
    git clone https://github.com/franchuperez/Reactjs.git
    cd ProyectoFinal-Perez
 Instalar dependencias:
 
 
-
 npm install
 Configurar Firebase en src/firebase/config.js o con variables de entorno .env:
 
+VITE_API_KEY=AIzaSyAUpxyJEosJTDQxCNZiST-ALqioDkAD-zU
+VITE_AUTH_DOMAIN=proyectofinal-perez.firebaseapp.com
+VITE_PROJECT_ID=proyectofinal-perez
+VITE_STORAGE_BUCKET=proyectofinal-perez.firebasestorage.app
+VITE_MESSAGING_SENDER_ID=277229311223
+VITE_APP_ID=1:277229311223:web:5b20a97e53482453c12ff2
 
 
-VITE_FIREBASE_API_KEY=tu_api_key
-VITE_FIREBASE_AUTH_DOMAIN=tu_auth_domain
-VITE_FIREBASE_PROJECT_ID=tu_project_id
 Ejecutar el proyecto:
-
-
 
 npm run dev
 Rutas principales
